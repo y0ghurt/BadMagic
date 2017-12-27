@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DamageDef ParentName="LocalInjuryBase" Name="PotatoDamageBase">
+    <defName>PotatoDamage</defName>
+    <label>potato</label>
+    <workerClass>DamageWorker_Blunt</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been tatered to death.</deathMessage>
+    <hediff>Crush</hediff>
+    <hediffSkin>Bruise</hediffSkin>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Blunt</impactSoundType>
+    <armorCategory>Blunt</armorCategory>
+    <bluntInnerHitFrequency>0.4</bluntInnerHitFrequency>
+    <bluntInnerHitConverted>
+      <min>0.1</min>
+      <max>0.2</max>
+    </bluntInnerHitConverted>
+    <bluntInnerHitAdded>
+      <min>0.2</min>
+      <max>0.35</max>
+    </bluntInnerHitAdded>
+  </DamageDef>
+  
+   <ThingDef Name="BasePotato" Abstract="True">
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <label>potato</label>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+  </ThingDef> 
+  
+   
+  <ThingDef ParentName="BasePotato">
+    <defName>Potato_PotatoCannon</defName>
+    <label>potato cannon potato</label>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/PotatoCannonPotato</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>PotatoDamage</damageDef>
+      <damageAmountBase>29</damageAmountBase>
+      <speed>40</speed>
+    </projectile>
+  </ThingDef>
+  
+  
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>SpellBook_FireMagic_TierOne</defName>
+    <label>tier one fire spellbook</label>
+    <description>Flame on!</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/PotatoCannon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Standard_Pickup</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>22222</WorkToMake>
+      <Mass>4</Mass>
+      <AccuracyTouch>0.75</AccuracyTouch>
+      <AccuracyShort>0.95</AccuracyShort>
+      <AccuracyMedium>0.95</AccuracyMedium>
+      <AccuracyLong>0.89</AccuracyLong>
+      <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+      <Weapon_Bulk>2.0</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>40</Steel>
+	  <RawPotatoes>50</RawPotatoes>
+    </costList>
+    <verbs>
+      <li>
+	    <label>breathe fire</label>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_Minigun</defaultProjectile>
+        <forcedMissRadius>2.4</forcedMissRadius>
+        <warmupTime>3.0</warmupTime>
+        <range>22</range>
+        <burstShotCount>30</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>ShotMinigun</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+      <li>
+        <label>launch fireball</label>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>35</range>
+        <forcedMissRadius>2.0</forcedMissRadius>
+        <warmupTime>5.5</warmupTime>
+        <noiseRadius>4</noiseRadius>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <soundCast>ThrowMolotovCocktail</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <defaultProjectile>Proj_GrenadeMolotov</defaultProjectile>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
+    <weaponTags>
+      <li>Tier 1 Fire Spellbook</li>
+    </weaponTags>
+  </ThingDef>
+  
+</Defs>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <WorkTypeDef>
+    <defName>MedievalMagic_Conjuring</defName>
+    <labelShort>Conjure</labelShort>
+    <pawnLabel>Magician</pawnLabel>
+    <gerundLabel>conjuring</gerundLabel>
+    <description>Conjuring magical items.</description>
+    <verb>Conjuring at</verb>
+    <naturalPriority>475</naturalPriority>
+    <relevantSkills>
+      <li>Intellectual</li>
+    </relevantSkills>
+    <workTags>
+      <li>Intellectual</li>
+	  <li>Crafting</li>
+    </workTags>
+  </WorkTypeDef>
+</Defs>
