@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Languages>
+  <BM_IceShart_Hypothermia_SuccessMessage>{0} gave {1} hypothermia!</BM_IceShart_Hypothermia_SuccessMessage>
+  <BM_IceShart_Hypothermia_FailureMessage>Failure: {0} chance</BM_IceShart_Hypothermia_FailureMessage>
+</Languages>
