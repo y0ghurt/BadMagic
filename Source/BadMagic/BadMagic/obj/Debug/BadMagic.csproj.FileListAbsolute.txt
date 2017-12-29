@@ -1,0 +1,4 @@
+D:\Program Files\SteamLibrary\steamapps\common\RimWorld\Mods\BadMagic\Source\BadMagic\BadMagic\obj\Debug\BadMagic.csprojResolveAssemblyReference.cache
+D:\Program Files\SteamLibrary\steamapps\common\RimWorld\Mods\BadMagic\Source\BadMagic\BadMagic\obj\Debug\BadMagic.csproj.CoreCompileInputs.cache
+D:\Program Files\SteamLibrary\steamapps\common\RimWorld\Mods\BadMagic\Assemblies\BadMagic.dll
+D:\Program Files\SteamLibrary\steamapps\common\RimWorld\Mods\BadMagic\Source\BadMagic\BadMagic\obj\Debug\BadMagic.dll

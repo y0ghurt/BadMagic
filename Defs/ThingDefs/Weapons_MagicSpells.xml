@@ -4,7 +4,7 @@
   <DamageDef ParentName="LocalInjuryBase" Name="ShartBase">
     <defName>ShartCut</defName>
     <label>cut</label>
-    <workerClass>DamageWorker_Cut</workerClass>
+    <workerClass>BadMagic.DamageWorker_IceShart</workerClass>
     <externalViolence>true</externalViolence>
     <deathMessage>{0} has been cut to death.</deathMessage>
     <hediff>Cut</hediff>
@@ -21,7 +21,6 @@
         <li>1, 3</li>
       </points>
     </cutExtraTargetsCurve>
-    <cutCleaveBonus>1.4</cutCleaveBonus>
   </DamageDef>
   
    <ThingDef Name="BaseIceShart" Abstract="True">
@@ -38,7 +37,8 @@
   </ThingDef> 
   
    
-  <ThingDef Class="BadMagic.ThingDef_IceShart" ParentName="BaseIceShart">
+  <!--<ThingDef Class="BadMagic.ThingDef_IceShart" ParentName="BaseIceShart">-->
+  <ThingDef ParentName="BaseIceShart">
     <defName>Projectile_IceShart</defName>
     <label>ice shart</label>
     <graphicData>
@@ -50,9 +50,11 @@
       <damageAmountBase>4</damageAmountBase>
       <speed>20</speed>
     </projectile>
+	<!--<AddInfectionChance>0.5</AddInfectionChance>
+	<InfectionHediff>WoundInfection</InfectionHediff>
     <AddHyphothermiaChance>0.3</AddHyphothermiaChance>
     <HypothermiaHediff>Hypothermia</HypothermiaHediff>
-    <thingClass>BadMagic.Projectile_IceShart</thingClass>
+    <thingClass>BadMagic.Projectile_IceShart</thingClass>-->
   </ThingDef>
   
   
@@ -71,10 +73,10 @@
     <statBases>
       <WorkToMake>22222</WorkToMake>
       <Mass>4</Mass>
-      <AccuracyTouch>0.99</AccuracyTouch>
-      <AccuracyShort>0.99</AccuracyShort>
-      <AccuracyMedium>0.99</AccuracyMedium>
-      <AccuracyLong>0.99</AccuracyLong>
+      <AccuracyTouch>0.75</AccuracyTouch>
+      <AccuracyShort>0.95</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
       <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
       <Weapon_Bulk>1.0</Weapon_Bulk>
     </statBases>
